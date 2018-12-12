@@ -16,6 +16,12 @@ int main()
         unsigned int liczbaZnakow = wiersz.size();
         fstream plikWyjsciowy;
         plikWyjsciowy.open("b.txt", ios::out);
+        if(!plikWyjsciowy.good())
+        {
+            cout << "Cos poszlo nie tak, plik wyjsciowy nie zostal otwarty/utworzony" << endl;
+            return 0;
+        }
+        
         for(unsigned int i = liczbaZnakow; i > 0; i--)
         {
             plikWyjsciowy << wiersz.at(i-1);
