@@ -13,6 +13,12 @@ int main()
         string wiersz;
         getline(plikWejsciowy, wiersz);
         plikWejsciowy.close();
+        if(wiersz.empty())
+        {
+            cout << "Plik wejsciowy jest pusty" << endl;
+            return 0;
+        }
+        
         unsigned int liczbaZnakow = wiersz.size();
         fstream plikWyjsciowy;
         plikWyjsciowy.open("b.txt", ios::out);
