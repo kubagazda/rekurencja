@@ -30,7 +30,7 @@ int main()
         
         for(unsigned int i = liczbaZnakow; i > 0; i--)
         {
-            plikWyjsciowy << wiersz.at(i-1);
+            plikWyjsciowy << wiersz.at(i-1);    // metoda at() klasy string zwraca znak o podanym położeniu, tak jak operator []
         }
         plikWyjsciowy.close();
     } else cout << "Dostep do pliku zostal zabroniony lub plik nie istnieje!" << endl;
